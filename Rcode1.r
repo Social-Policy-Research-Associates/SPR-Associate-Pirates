@@ -48,7 +48,7 @@ seq(2,6)             # sequence of integers between 2 and 6
 2:6                  # an equavalent way      or c(1:6)
 seq(4,20,by=4)       # Arithmetic sequence: Every 4th integer between 4 and 20
 
-x <- c(2,0,1,1)      # Creates vector with elements 2,0,0,4
+x <- c(2,0,1,1)      # Creates vector with elements 2,0,1,1
 y <- c(1,9,9,9)      # c is concatenation operator
 x + y                # Sums elements of two vectors
 x * y                # multiplication pointwise
@@ -120,7 +120,7 @@ matrix(1:10,4,5)
 ################################################################################
 #       matrix  operation III
 ################################################################################
-diag(1,3)
+diag(2,4)
 
 x = diag(2,3)
 solve(x)             # inverse matrix
