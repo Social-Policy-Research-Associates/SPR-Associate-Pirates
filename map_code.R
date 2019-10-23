@@ -10,6 +10,21 @@ names(fireball)
 summary(fireball)
 summary(fireball$latitude)
 
+#create dataframe of summary of fireball dataframe
+example.table      <- summary(fireball)
+example.table.data <- as.data.frame(t(data.frame(unclass(example.table))))
+#rename columns
+colnames(example.table.data)[colnames(example.table.data)=="X"]   <- "min"
+colnames(example.table.data)[colnames(example.table.data)=="X.1"] <- "Q1"
+colnames(example.table.data)[colnames(example.table.data)=="X.2"] <- "median"
+colnames(example.table.data)[colnames(example.table.data)=="X.3"] <- "mean"
+colnames(example.table.data)[colnames(example.table.data)=="X.4"] <- "Q3"
+colnames(example.table.data)[colnames(example.table.data)=="X.5"] <- "max"
+colnames(example.table.data)[colnames(example.table.data)=="X.6"] <- "NAs"
+#save as excel spreadsheet
+write.csv(example.table.data,"fireballtable.csv")
+
+
 install.packages("rworldmap")
 library(rworldmap)
 newmap <- getMap(resolution = "low")
