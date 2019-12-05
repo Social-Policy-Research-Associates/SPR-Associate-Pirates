@@ -2,7 +2,6 @@ library(shiny)
 
 
 
-
 josh <- fluidPage(
   selectInput("XVAR",
               label="Variable of Interest",
